@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --clr-pri: #f00;
-  --clr-sec: #0f0;
-  --clr-white: #fff;
-  --clr-light: #efefef;
-  --clr-black: #000;
-  --clr-dark: #333;
+  --clr-pri: 255, 80, 5;
+  --clr-pri-lt: 253, 119, 2;
+  --clr-pri-lt-ex: 255, 142, 2;
+  --clr-sec: 0, 35, 71;
+  --clr-sec-lt: 0, 51, 102;
+  --clr-sec-lt-ex: 0, 63, 125;
+
+  --clr-white: 255, 255, 255;
+  --clr-light: 239, 239, 239;
+  --clr-black: 0, 0, 0;
+  --clr-dark: 51, 51, 51;
 
   --font-pri: "Poppins", sans-serif;
+  --header-height: 12rem;
 }
 * {
   box-sizing: border-box;
@@ -143,4 +149,190 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--font-pri);
+  font-size: 1.6rem;
+}
+.btn {
+  display: inline-block;
+  height: 5rem;
+  padding: 0 4.5rem;
+  background-color: rgba(var(--clr-dark));
+  color: rgba(var(--clr-light));
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.btn:hover {
+  background-color: var(--clr-black);
+}
+.btn.btn--pri {
+  background-color: rgba(var(--clr-pri), 0.2);
+  border: 2px solid rgba(var(--clr-pri));
+  color: rgba(var(--clr-pri));
+}
+.container {
+  max-width: 150rem;
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(var(--clr-white));
+}
+.header__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+.header__contents__logo--side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-logo-box {
+  width: 10rem;
+  height: 10rem;
+}
+.main-logo-box .logo--box__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+}
+.logo-tag {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+.main-nav__list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+.nav-item__link {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(var(--clr-sec));
+  font-weight: 500;
+  padding: 0 5px;
+  position: relative;
+  transition: 0.15s;
+}
+.nav-item:hover .nav-item__link,
+.nav-item.active .nav-item__link {
+  color: rgba(var(--clr-pri));
+}
+main.header-space {
+  padding-top: var(--header-height);
+}
+.hero-main {
+  min-height: calc(100vh - var(--header-height));
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 3rem;
+}
+.hero-bg-slider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+}
+.hero-bg-slider .images-slider,
+.hero-bg-slider .slick-list,
+.hero-bg-slider .slick-track,
+.images-slider-item,
+.hero-bg-slider .slick-slide img {
+  height: 100%;
+}
+.hero-bg-slider .slick-slide img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-bg-slider .slick-dots {
+  display: flex !important;
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+  gap: 2rem;
+}
+.hero-bg-slider .slick-dots li {
+  width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  font-size: 0 !important;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  outline: 2px solid rgba(var(--clr-pri));
+  outline-offset: 0.3rem;
+  background-color: rgba(var(--clr-white));
+  cursor: pointer;
+}
+.hero-bg-slider .slick-dots li.slick-active {
+  background-color: rgba(var(--clr-pri));
+}
+.hero-bg-slider .slick-dots li button {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  cursor: pointer;
+}
+.hero-contents {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.hero-heading {
+  font-size: 9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+.hero-subheading {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.card {
+  flex: 0 0 calc((100% / 3) - 1rem);
+}
+section + section {
+  margin-top: 50px;
 }
