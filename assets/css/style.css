@@ -226,6 +226,11 @@ body {
   background-color: rgba(var(--clr-pri), 0.2);
   outline: 2px solid rgba(var(--clr-pri));
   color: rgba(var(--clr-pri));
+  transition: 0.2s;
+}
+.btn.btn--pri:hover,
+.btn.btn--pri:focus {
+  background-color: rgba(var(--clr-pri), 0.3);
 }
 .container {
   max-width: 150rem;
@@ -273,6 +278,11 @@ header {
   font-weight: 600;
   letter-spacing: 0.01em;
   user-select: none;
+  color: rgba(var(--clr-pri));
+  text-transform: uppercase;
+}
+.logo-tag span {
+  color: rgba(var(--clr-sec));
 }
 .main-nav__list {
   display: flex;
@@ -719,12 +729,11 @@ section + section {
   background-color: rgba(var(--clr-white));
   align-items: center;
   justify-content: center;
-
   border-radius: 6px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
   box-shadow: 5px 5px 10px #dedede, -5px -5px 10px #ffffff;
   transition: 0.2s;
-  color: rgba(var(--clr-sec));
+  color: rgba(var(--clr-pri));
   text-decoration: none;
   font-size: 2rem;
 }
