@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silent Shores</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 
@@ -37,9 +35,9 @@
                         <li class="nav-item contact-us-nav">
                             <a href="#contact-us" class="nav-item__link">Contact Us</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a href="#" class="nav-item__link">Services</a>
-                        </li> -->
+                        <li class="nav-item testimonials-nav">
+                            <a href="#testimonials" class="nav-item__link">Testimonials</a>
+                        </li>
                         <!-- <li class="nav-item">
                             <a href="#" class="nav-item__link">Gallery</a>
                         </li> -->
@@ -47,8 +45,35 @@
                 </nav>
                 <div class="cta-box">
                     <a href="#contact-us" class="btn btn--pri btn--cta">Book Now</a>
+                    <button class="mob-nav-toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
             </div>
+        </div>
+        <div class="header-mob">
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="nav-item home-nav active">
+                        <a href="#" class="nav-item__link">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                            <a href="#" class="nav-item__link">Packages</a>
+                        </li> -->
+                    <li class="nav-item destinations-nav">
+                        <a href="#destinatinations" class="nav-item__link">Destinations</a>
+                    </li>
+                    <li class="nav-item contact-us-nav">
+                        <a href="#contact-us" class="nav-item__link">Contact Us</a>
+                    </li>
+                    <li class="nav-item testimonials-nav">
+                        <a href="#testimonials" class="nav-item__link">Testimonials</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                            <a href="#" class="nav-item__link">Gallery</a>
+                        </li> -->
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="header-space">
@@ -196,11 +221,11 @@
                             If you are looking at spending some quality in a 'out of the fairy tale' surroundings,
                             or maybe searching for some adrenaline rush, a Kashmir tour package has it all!</p>
                         <div class="contact-call">
-                            <h4>For any enquiry, call us +91 7889824280</h4>
+                            <h4>For any enquiry, <span>call us +91 7889824280</span></h4>
                         </div>
                     </div>
                     <div class="form-side">
-                        <form id="contact-form" class="form-contents" action="./email.php" method="POST">
+                        <!-- <form id="contact-form" class="form-contents" action="./email.php" method="POST">
                             <div class="contact-row row--2">
                                 <div class="input-box">
                                     <div class="input-group">
@@ -239,7 +264,77 @@
                             <div class="form-action">
                                 <button class="btn btn--pri btn--frm-action">Send</button>
                             </div>
-                        </form>
+                        </form> -->
+                        <div class="form-contents">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdSRI-l2XRyORpVViZMBOogI10Hm_zR8-sWSktWIjRjRtH67A/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <div id="testimonials" class="nav-empty-location"></div>
+                <div class="section-title">
+                    <h2>
+                        <span>Testimonials</span>
+                    </h2>
+                </div>
+                <div class="testimonials-cards-container">
+                    <div class="testimonials-cards">
+                        <div class="testimonials-card">
+                            <div class="testmonial-card-contents">
+                                <div class="img-box">
+                                    <img src="https://source.unsplash.com/random/?face,man,user" alt="">
+                                </div>
+                                <div class="testimonail-msg">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ducimus magni corporis
+                                    incidunt reiciendis odio expedita numquam provident laborum eum quis itaque
+                                    praesentium
+                                    delectus minus ipsa,
+                                </div>
+                                <h3 class="testimonial-name">Junaid Bhatt 1</h3>
+                            </div>
+                        </div>
+                        <div class="testimonials-card">
+                            <div class="testmonial-card-contents">
+                                <div class="img-box">
+                                    <img src="https://source.unsplash.com/random/?face,man,user" alt="">
+                                </div>
+                                <div class="testimonail-msg">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ducimus magni corporis
+                                </div>
+                                <h3 class="testimonial-name">Junaid Bhatt 2</h3>
+                            </div>
+                        </div>
+                        <div class="testimonials-card">
+                            <div class="testmonial-card-contents">
+                                <div class="img-box">
+                                    <img src="https://source.unsplash.com/random/?face,man,user" alt="">
+                                </div>
+                                <div class="testimonail-msg">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ducimus magni corporis
+                                    incidunt reiciendis odio expedita numquam provident laborum eum quis itaque
+                                    praesentium
+                                    delectus minus ipsa,
+                                </div>
+                                <h3 class="testimonial-name">Junaid Bhatt 3</h3>
+                            </div>
+                        </div>
+                        <div class="testimonials-card">
+                            <div class="testmonial-card-contents">
+                                <div class="img-box">
+                                    <img src="https://source.unsplash.com/random/?face,man,user" alt="">
+                                </div>
+                                <div class="testimonail-msg">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ducimus magni corporis
+                                    incidunt reiciendis odio expedita numquam provident laborum eum quis itaque
+                                    praesentium
+                                    delectus minus ipsa,
+                                </div>
+                                <h3 class="testimonial-name">Junaid Bhatt4</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -259,24 +354,19 @@
                     <nav>
                         <ul class="footer-nav-list">
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>Home</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>Home</a>
                             </li>
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>About</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>About</a>
                             </li>
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>Destination</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>Destination</a>
                             </li>
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>Services</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>Services</a>
                             </li>
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>Gallery</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>Gallery</a>
                             </li>
                         </ul>
                     </nav>
@@ -286,24 +376,19 @@
                     <nav>
                         <ul class="footer-nav-list">
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>Home</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>Home</a>
                             </li>
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>About</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>About</a>
                             </li>
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>Destination</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>Destination</a>
                             </li>
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>Services</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>Services</a>
                             </li>
                             <li class="footer-nav-item">
-                                <a class="footer-nav-link" href="#"><i
-                                        class="fa-brands fa-canadian-maple-leaf"></i>Gallery</a>
+                                <a class="footer-nav-link" href="#"><i class="fa-brands fa-canadian-maple-leaf"></i>Gallery</a>
                             </li>
                         </ul>
                     </nav>
@@ -331,62 +416,62 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+    <!-- <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
         integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
     <script src="./assets/script/script.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('#contact-form').validate({
-            rules: {
-                username: 'required',
-                phone: 'required',
-                date: 'required',
-                email: {
-                    email: true
-                }
-            },
-            messages: {
-                username: 'Name is required',
-                phone: 'Ph number is required',
-                date: 'Date is required',
-            },
-            submitHandler: function(form) {
-                $('.btn--frm-action').text('Sending...').addClass('disabled').attr("disabled",
-                    true);
-                $.ajax({
-                    url: './email.php', // Replace with your actual server URL
-                    method: 'POST', // HTTP method
-                    data: $(form).serialize(), // Serialize form data
-                    success: function(response) {
-                        // Handle success response from the server
-                        Swal.fire(
-                            'Succesfully Sent!',
-                            'Your message has been successfully sent',
-                            'success'
-                        );
-                        $('.btn--frm-action').text('Send').removeClass('disabled')
-                            .removeAttr("disabled");
-                        $('#contact-form')[0].reset();
-                    },
-                    error: function(xhr, textStatus, errorThrown) {
-                        // Handle error response from the server
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: 'Something went wrong!',
-                        });
-                        $('.btn--frm-action').text('Send').removeClass('disabled')
-                            .removeAttr("disabled");
+    <!-- <script type="text/javascript">
+        $(document).ready(function() {
+            $('#contact-form').validate({
+                rules: {
+                    username: 'required',
+                    phone: 'required',
+                    date: 'required',
+                    email: {
+                        email: true
                     }
-                });
-            }
+                },
+                messages: {
+                    username: 'Name is required',
+                    phone: 'Ph number is required',
+                    date: 'Date is required',
+                },
+                submitHandler: function(form) {
+                    $('.btn--frm-action').text('Sending...').addClass('disabled').attr("disabled",
+                        true);
+                    $.ajax({
+                        url: './email.php', // Replace with your actual server URL
+                        method: 'POST', // HTTP method
+                        data: $(form).serialize(), // Serialize form data
+                        success: function(response) {
+                            // Handle success response from the server
+                            Swal.fire(
+                                'Succesfully Sent!',
+                                'Your message has been successfully sent',
+                                'success'
+                            );
+                            $('.btn--frm-action').text('Send').removeClass('disabled')
+                                .removeAttr("disabled");
+                            $('#contact-form')[0].reset();
+                        },
+                        error: function(xhr, textStatus, errorThrown) {
+                            // Handle error response from the server
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Something went wrong!',
+                            });
+                            $('.btn--frm-action').text('Send').removeClass('disabled')
+                                .removeAttr("disabled");
+                        }
+                    });
+                }
+            });
         });
-    });
-    </script>
+    </script> -->
 </body>
 
 </html>
