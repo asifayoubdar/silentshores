@@ -955,10 +955,10 @@ label.error {
   height: 100%;
   overflow: auto;
 }
-.main-nav__list li {
+.header-mob .main-nav__list li {
   display: block;
 }
-.main-nav__list li + li {
+.header-mob .main-nav__list li + li {
   margin-top: 2rem;
 }
 .mob-nav-toggler {
