@@ -57,12 +57,77 @@ $(document).ready(function () {
     $('.mob-nav-toggler').click(function () {
         $(this).toggleClass('show')
         $('.header-mob').toggleClass('show');
-        $('body').toggleClass('noscroll');
+        // $('body').toggleClass('noscroll');
+        $('.overlay').toggleClass('show');
     });
-    $('.mob-nav-toggler.show').click(function () {
-        $(this).removeClass('show');
+    const closeSidebar = function () {
+        $('.mob-nav-toggler').removeClass('show');
         $('.header-mob').removeClass('show');
-        $('body').removeClass('noscroll');
-    })
+        $('.overlay').removeClass('show');
+    }
+    $('.mob-nav-toggler.show').click(function () {
+        closeSidebar();
+    });
+    $('.header-mob .nav-item').click(function () {
+        closeSidebar();
+    });
+    $('.card-action').click(function () {
+        const title = $(this).siblings('.card-title').text();
+        const desc = $(this).siblings('.card-desc').text();
+        const mainImg = $(this).parents('.card-body').siblings('.card__img-box').find('.gal-item-main-img').attr('src');
+        var hiddenImageSrcs = [];
+        const allimgs = $(this).parents('.card-body').siblings('.card__img-box').find('.gal-hidden-items span');
+        allimgs.each(function () {
+            hiddenImageSrcs.push($(this).text().trim());
+        })
 
+        $('.popup .popup-feature-img-box a').attr('href', mainImg);
+        $('.popup .popup-feature-img-box img').attr('src', mainImg);
+        $('.popup-title').text(title);
+        $('.popup-desc').text(desc);
+        var popupGallery = $('.popup-gallery-all-imgs');
+
+        // Loop through the hiddenImageSrcs array and create the HTML structure
+        for (var i = 0; i < hiddenImageSrcs.length; i++) {
+            var newImageItem = $('<div class="popup-all-imgs-item loading_animation">');
+            var newImageLink = $('<a class="gal-img-link" data-lightbox="jb-gal-1">');
+            var newImage = $('<img class="example-image" alt="image-' + (i + 1) + '">');
+
+            // Set href and src attributes for the anchor and image elements
+            newImageLink.attr('href', hiddenImageSrcs[i]);
+            newImage.attr('src', hiddenImageSrcs[i]);
+
+            // Append the image to the link, and the link to the new image item
+            newImageLink.append(newImage);
+            newImageItem.append(newImageLink);
+
+            // Append the new image item to the popup gallery container
+            popupGallery.append(newImageItem);
+        }
+        $('.popup').addClass('show');
+        $('.overlay').addClass('show');
+        $('body').addClass('noscroll');
+    });
+    const closePopup = () => {
+        $('.popup').removeClass('show');
+        $('body').removeClass('noscroll');
+        $('.overlay').removeClass('show');
+        $('.popup-title').text('');
+        $('.popup-desc').text('');
+        $('.popup .popup-feature-img-box a').attr('href', '');
+        $('.popup .popup-feature-img-box img').attr('src', '');
+        $('.popup .popup-gallery-all-imgs').empty();
+    };
+    $('.popup-close').click(function () {
+        closePopup();
+    });
+    $('.overlay').click(function () {
+        $(this).removeClass('show');
+        if ($('.mob-nav-toggler').hasClass('show')) {
+            closeSidebar();
+        };
+        if ($('.popup').hasClass('show')) {
+            closePopup();
+        };
+    });
 });
